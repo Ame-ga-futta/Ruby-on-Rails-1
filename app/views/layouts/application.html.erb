@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Schedule</title>
+    <title>Schedule_app</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=M+PLUS+1p:wght@100&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <div class="header under-bar-3px">
+        <div class="header-title">
+          <%= link_to "スケジュール管理アプリ", "/", class: "header-title-link links" %>
+        </div>
+        <div class="header-link">
+          <ul class="header-link-list">
+            <li>
+              <%= link_to "スケジュール一覧", :posts, class: "header-link-list-link links" %>
+            </li>
+            <li>
+              <%= link_to "スケジュール登録", :new_post, class: "header-link-list-link links"  %> <!--後からリンク変える-->
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <% if flash.notice %>
+      <p class="notice"><%= flash.notice %></p>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

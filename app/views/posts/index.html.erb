@@ -1,0 +1,33 @@
+<div class="contents">
+  <div class="index-title">
+    <p class="under-bar-3px index-title-text">スケジュール一覧</p>
+    <ul class="index-list under-bar-3px bold">
+      <li>title</li>
+      <li>start date</li>
+      <li>end date</li>
+      <li>all day</li>
+      <li class="li-updated_at">updated at</li>
+    </ul>
+  </div>
+
+  <% @posts.each do |f| %>
+    <%= link_to f ,class: "links" do %>
+      <% if f.all_day %>
+        <% all_day = "○" %>
+      <% else %>
+        <% all_day = "-" %>
+      <% end %>
+      <div class="index-title">
+        <ul class="index-list under-bar-1px">
+          <li><%= f.title %></li>
+          <li><%= f.start_date %></li>
+          <li><%= f.end_date %></li>
+          <li><%= all_day %></li>
+          <li class="li-updated_at"><%= f.updated_at.to_s(:datetime_jp) %></li>
+        </ul>
+      </div>
+    <% end %>
+  <% end %>
+
+  <p class="other">※開始日が早い順に並びます</p>
+<div>
