@@ -1,0 +1,29 @@
+<%= render "shared/error", obj: @post %>
+
+<div class="contents">
+  <div class="index-title">
+    <p class="under-bar-3px index-title-text">スケジュール登録</p>
+    <ul class="index-list under-bar-3px bold">
+      <li>title</li>
+      <li>start date</li>
+      <li>end date</li>
+      <li class="li-all_day">all day</li>
+    </ul>
+  </div>
+
+<%= form_for(@post) do |f| %>
+  <div class="index-title">
+    <ul class="index-list under-bar-1px">
+      <li><%= f.text_field :title, size: 40, class: "form" %></li>
+      <li><%= f.date_field :start_date, class: "form" %></li>
+      <li><%= f.date_field :end_date, class: "form" %></li>
+      <li class="li-all_day"><%= f.check_box :all_day, class: "form" %></li>
+    </ul>
+    <p class="under-bar-3px">スケジュールメモ</p>
+    <%= f.text_area :text, size: "120x5", class: "text_area form" %>
+    <%= f.submit "登録完了", class: "form" %>
+  </div>
+
+<% end %>
+
+<div>

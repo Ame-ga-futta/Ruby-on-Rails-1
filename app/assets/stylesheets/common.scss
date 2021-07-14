@@ -1,0 +1,152 @@
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+body ,.form {
+  font-family: 'Barlow', 'M PLUS 1p', sans-serif;
+  color: rgb(129, 129, 129);
+}
+
+.under-bar-3px {
+  border-bottom: solid 3px rgba(194, 194, 194, 0.5);
+}
+
+.under-bar-1px {
+  border-bottom: solid 1px #c2c2c280;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.notice {
+  color: #ff4141;
+}
+
+.error-message {
+  color: #ff4141;
+  margin: 5px 0;
+}
+
+.other {
+  font-size: 14px;
+  text-align: right;
+  margin-top: 30px;
+}
+
+.header {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  text-decoration: none;
+  color: rgb(129, 129, 129);
+}
+
+.header-title-link {
+  font-size: 30px;
+}
+
+.header-link-list {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.header-link-list-link {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+.index-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.index-title p {
+  margin-top: 15px;
+  margin-bottom: 0;
+  width: 200px;
+}
+
+.index-title-text {
+  font-size: 25px;
+  padding: 10px 25px;
+}
+
+.index-list {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0 40px;
+  font-size: 16px;
+  width: 90%
+}
+
+.index-list li {
+  padding: 15px;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: 12em;
+}
+
+.index-list li:first-child {
+  width: 26em;
+}
+
+.li-updated_at {
+  width: 20em;
+}
+
+.li-all_day {
+  width: 5em;
+}
+
+.text_area {
+  margin: 15px 0;
+}
+
+.index-show-text {
+  padding-left: 40px;
+  font-size: 25px;
+  text-align: left;
+}
+
+.index-show-text p {
+  margin: 10px 120px;
+  width: auto;
+}
+
+.show-edit {
+  margin: 0 40px;
+  font-size: 20px;
+  width: 90%
+}
+
+.show-edit-list {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.show-edit-list li {
+  margin-left: 10px;
+  margin-right: 10px;
+}
